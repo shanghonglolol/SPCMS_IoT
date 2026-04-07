@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SPCMS Dashboard</title>
+    <link rel="stylesheet" href="dashboard.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0"></script>
+</head>
+<body>
+    <!-- Header -->
+    <div class="header">
+        <h1>🌱 Plant Monitor Dashboard</h1>
+        <div id="status" class="status">● Connected</div>
+    </div>
+
+    <div class="container">
+        <!-- Sensor Cards -->
+        <div class="grid">
+            <div class="card">
+                <div class="icon">💧</div>
+                <div id="moisture" class="value">--</div>
+                <div class="label">Soil Moisture</div>
+            </div>
+
+            <div class="card">
+                <div class="icon">🌡️</div>
+                <div id="temperature" class="value">--</div>
+                <div class="label">Temperature</div>
+            </div>
+
+            <div class="card">
+                <div class="icon">💨</div>
+                <div id="humidity" class="value">--</div>
+                <div class="label">Humidity</div>
+            </div>
+
+            <div class="card">
+                <div class="icon">☀️</div>
+                <div id="light" class="value">--</div>
+                <div class="label">Light Intensity</div>
+            </div>
+        </div>
+
+        <!-- Chart -->
+        <div class="card chart-card">
+            <h2>📈 Historical Trends</h2>
+            <canvas id="chart"></canvas>
+        </div>
+
+        <!-- Controls -->
+        <div class="card controls-card">
+            <h2>🎮 Controls</h2>
+            <div class="buttons">
+                <button id="refreshBtn" class="btn btn-green">🔄 Refresh Data</button>
+            </div>
+        </div>
+
+        <!-- Alerts -->
+        <div class="card alerts-card">
+            <h2>🚨 Alerts</h2>
+            <div id="alerts" class="alerts">
+                <div class="no-alerts">No alerts - system healthy! 🎉</div>
+            </div>
+        </div>
+    </div>
+
+    <script src="dashboard.js"></script>
+</body>
+</html>
